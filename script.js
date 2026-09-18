@@ -10,47 +10,71 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactLinks = [
         {
             name: 'TELEGRAM 🌐',
-            url: 'https://t.me/DREAMSHOP3300',
+            url: 'https://t.me/+fGeRDkd7cVcyYzk8',
             icon: '#icon-telegram',
             id: 'telegram-main',
             className: 'telegram-main',
             text: "TELEGRAM 🌐"
         },
         {
+            name: 'STAFF TELEGRAM 🗣',
+            url: 'https://t.me/DREAMSHOP3300',
+            icon: '#icon-telegram',
+            id: 'telegram-main',
+            className: 'telegram-main',
+            text: "STAFF TELEGRAM 🗣"
+        },
+        {
             name: 'PAGE INSTAGRAM 🟣',
-            url: 'https://www.instagram.com/cali_terps33?igsh=ZXh4b3AzYXIzMHRt&utm_source=qr',
+            url: 'https://www.instagram.com/cali.dream33?stkn=MXJtcHAzdWQwNzdhZA%3D%3D&utm_source=qr',
             icon: '#icon-instagram',
             id: 'insta-main',
             className: 'insta-main',
             text: "INSTAGRAM 🟣"
         },
-        {
+       /*  {
             name: 'WHATSAPP 📲',
             url: 'https://wa.me/212724671885',
             icon: '#icon-whatsapp',
             id: 'whatsapp-main',
             className: 'whatsapp', // Utilise un fond uni pour contraster
             text: "WHATSAPP 📲"
-        },
+        }, */
         {
             name: 'POMME DE TERRE 🥔',
-            url: 'https://tatokdym.org/joinchat/7OysuZZKGvLWUWuV2cLnSw',
+            url: 'https://tato.im/joinchat/ZO5zZ6nlQlZW9wByc8o4zw',
             icon: '#icon-potato',
             id: 'potato-main',
             className: 'potato-main',
             text: "POMME DE TERRE 🥔"
         },
         {
+            name: 'POTATO CHAT 💬',
+            url: 'https://tato.im/joinchat/BYweCrKYriqgSBN37Jt0xg',
+            icon: '#icon-potato',
+            id: 'potato-secours',
+            className: 'potato-secours',
+            text: "POTATO CHAT 💬"
+        },
+        {
             name: 'POTATO RETOUR 🤳',
-            url: 'https://tatokdym.org/joinchat/tyDsi03At3N8dZcm2H2wyg',
+            url: 'https://tato.im/joinchat/cnc9fGW3vK-Q6xqsZZNjbA',
             icon: '#icon-potato',
             id: 'potato-secours',
             className: 'potato-secours',
             text: "POTATO RETOUR 🤳"
         },
         {
+            name: 'POTATO VIDEO PHOTO 📸',
+            url: 'https://tato.im/joinchat/JEl-exipU_VPdUphNiKgeQ',
+            icon: '#icon-potato',
+            id: 'potato-secours',
+            className: 'potato-secours',
+            text: "POTATO VIDEO PHOTO 📸"
+        },
+        {
             name: 'DISCORD 👾',
-            url: 'https://discord.gg/rqDCqYvWA%5D',
+            url: 'https://discord.gg/uMeF63tWq',
             icon: '#icon-discord',
             id: 'discord',
             className: 'signal',
@@ -70,12 +94,32 @@ document.addEventListener('DOMContentLoaded', function () {
             image: 'CategHash.png',
             farms: [
                 {
-                    id: 'DOUBLE STATIC',
-                    name: '🖐🏼 DOUBLE STATIC 👩‍🌾',
+                    id: 'dry premium',
+                    name: '🖐🏼 DRY PREMIUM 👩‍🌾',
                     image: '',
                     badgeText: '2 produits',
                     products: [
-                        {
+                         {
+                            id: 'FILTRED 120/220u ⚡',
+                            name: 'FILTRED 120/220u ⚡',
+                            farm: 'CaliDreamSelection ✅️',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductFil.png',
+                            video: 'VideoFil.mov',
+                            description: `STRAIN DISPONIBLE : 
+Orange sherbet 🍊 
+OREOZ🍪
+LEMON CHERRY GÉLATO🍋🍒`,
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 80.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 220.00 },
+                                { weight: '100g', price: 350.00 }
+                            ]
+                        },
+                       /*  {
                             id: 'BLACK CHERRY 🖤🍒',
                             name: 'BLACK CHERRY 🖤🍒',
                             farm: 'HASH MOUTAINS FARMS ⛰️',
@@ -109,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '100g', price: 1000.00 }
 
                             ]
-                        }
+                        } */
                     ]
                 },
                 {
@@ -118,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                      /*   {
                             id: 'SUPER BOOF X CHERRY 🍒🍋',
                             name: 'SUPER BOOF X CHERRY 🍒🍋',
                             farm: '⛽ GAZ SÉLECTION',
@@ -149,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '25g', price: 250.00 },
                                 { weight: '50g', price: 450.00 }
                             ]
-                        }
+                        } */
                     ]
                 },
                 {
@@ -158,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'SUPER LEMON HAZE 🍋‍🟩',
                             name: 'SUPER LEMON HAZE 🍋‍🟩',
                             farm: '⛽ GAZ SÉLECTION',
@@ -174,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 550.00 },
                                 { weight: '100g', price: 1000.00 }
                             ]
-                        }
+                        } */
                     ]
                 },
                /*  {
@@ -245,6 +289,30 @@ document.addEventListener('DOMContentLoaded', function () {
                     badgeText: '1 produit',
                     products: [
                         {
+                            id: 'GELATO 🍦',
+                            name: 'GELATO 🍦',
+                            farm: '📍CANADIENNE PREMIUM ✨ ',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductG.png',
+                            video: 'VideoG.mp4',
+                            description: `🇨🇦🇺🇸 CALI CANADIENNE — GELATO 🍦  
+📍CANADIENNE PREMIUM ✨  
+••••••••••••••••••
+
+🍦 GELATO  
+🍓 Fruité • sucré • creamy  
+💨 Notes fresh & légèrement gassy  
+😮‍💨 Smoke smooth • bien posé`,
+                            tarifs: [
+                                { weight: '5g', price: 60.00 },
+                                { weight: '10g', price: 110.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 350.00 },
+                                { weight: '100g', price: 650.00 },
+                            ]
+                        }
+                      /*   {
                             id: 'GARY PAYTON 🇺🇸🔥',
                             name: 'GARY PAYTON 🇺🇸🔥',
                             farm: '📍 HYBRIDE PREMIUM ',
@@ -260,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 { weight: '50g', price: 350.00 },
                                 { weight: '100g', price: 650.00 },
                             ]
-                        }
+                        } */
                        /*  {
                             id: 'RAINBOW 🍬',
                             name: 'RAINBOW 🍬',
@@ -1204,7 +1272,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
        if (target.closest('#confirm-order-button')) {
             // Remplace l'ancien identifiant par le bon compte de réception
-            const targetUsername = 'TERPSCOMMANDE33'; 
+            const targetUsername = 'DREAMSHOP3300'; 
             
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
