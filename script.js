@@ -318,7 +318,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
             farms: [
                 {
                     id: 'CALI_CANADIENNE',
-                    name: '🇨🇦 RÉAL CALI CANADIENNE 📦',
+                    name: 'Cali cannadienne🇨🇦🇺🇸',
                     image: '',
                     badgeText: '1 produit',
                     products: [
