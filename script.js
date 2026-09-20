@@ -384,8 +384,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                 }
             ]
         },
-
-        // --- Catégorie 3: ZIP (Extra) ---
+ // --- Catégorie 3: ZIP (Extra) ---
         {
             id: 'ZIP',
             name: '🎒 ZIP / EXTRA 🎒',
@@ -420,6 +419,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                 }
             ]
         }
+       
     ];
 
     // --- VARIABLES D'ÉTAT ---
@@ -434,6 +434,12 @@ LEMON CHERRY GÉLATO🍋🍒`,
     let currentFarmId = null;
     let appliedPromo = null;
     let paymentMethod = 'Espèce';
+
+    // --- MODE DE RÉCEPTION DE LA COMMANDE ---
+    // L'utilisateur doit choisir entre MeetUp et Livraison avant de commander.
+    let orderMode = '';
+    let deliveryAddress = '';
+    let requestedTime = '';
 
     // --- DÉFINIS TES CODES PROMO ICI ---
     const validPromoCodes = {
@@ -818,12 +824,82 @@ LEMON CHERRY GÉLATO🍋🍒`,
         showPage('page-product');
     }
 
+    // --- OPTIONS MEETUP / LIVRAISON ---
+    function formatRequestedTime(timeValue) {
+        if (!timeValue) return '';
+        return timeValue.replace(':', 'h');
+    }
+
+    function escapeHTML(value) {
+        return String(value ?? '').replace(/[&<>"']/g, char => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        })[char]);
+    }
+
+    function getOrderPreferencesError() {
+        if (!orderMode) {
+            return 'Choisis MeetUp ou Livraison.';
+        }
+        if (orderMode === 'Livraison' && !deliveryAddress.trim()) {
+            return 'Renseigne ton adresse de livraison.';
+        }
+        if (!requestedTime) {
+            return `Choisis l'heure souhaitée pour ${orderMode === 'Livraison' ? 'la livraison' : 'le MeetUp'}.`;
+        }
+        return '';
+    }
+
+    function syncOrderPreferencesUI() {
+        const modeButtons = document.querySelectorAll('.fulfillment-btn');
+        const addressContainer = document.getElementById('delivery-address-container');
+        const addressInput = document.getElementById('delivery-address-input');
+        const timeContainer = document.getElementById('requested-time-container');
+        const timeInput = document.getElementById('requested-time-input');
+        const helperText = document.getElementById('order-preferences-helper');
+        const checkoutButton = document.getElementById('checkout-button');
+
+        modeButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.fulfillment === orderMode);
+        });
+
+        if (addressContainer) {
+            addressContainer.style.display = orderMode === 'Livraison' ? 'flex' : 'none';
+        }
+        if (timeContainer) {
+            timeContainer.style.display = orderMode ? 'flex' : 'none';
+        }
+
+        if (addressInput && addressInput.value !== deliveryAddress) {
+            addressInput.value = deliveryAddress;
+        }
+        if (timeInput && timeInput.value !== requestedTime) {
+            timeInput.value = requestedTime;
+        }
+
+        if (helperText) {
+            const error = getOrderPreferencesError();
+            helperText.textContent = error || `✅ ${orderMode} sélectionné${requestedTime ? ` • ${formatRequestedTime(requestedTime)}` : ''}`;
+            helperText.classList.toggle('valid', !error);
+        }
+
+        // Panier vide = impossible de commander. Pour le reste, le clic permet
+        // d'afficher un message clair si un champ obligatoire manque.
+        if (checkoutButton) {
+            checkoutButton.disabled = cart.length === 0;
+        }
+    }
+
     function renderCart() {
         const cartContainer = document.getElementById('cart-items-container');
         if (cart.length === 0) {
             cartContainer.innerHTML = '<p>Votre panier est vide.</p>';
             document.getElementById('cart-total-price').innerText = '0.00€';
             updateCartCount();
+            syncOrderPreferencesUI();
             return;
         }
 
@@ -846,6 +922,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
         const total = cart.reduce((sum, item) => sum + item.totalPrice, 0);
         document.getElementById('cart-total-price').innerText = `${total.toFixed(2)}€`;
         updateCartCount();
+        syncOrderPreferencesUI();
     }
 
     function renderConfirmation() {
@@ -915,6 +992,19 @@ LEMON CHERRY GÉLATO🍋🍒`,
 
         const summaryContainer = document.getElementById('confirmation-summary');
         let summaryHTML = `
+            <div class="summary-line order-mode-summary">
+                <span>📍 Mode :</span>
+                <span>${orderMode || 'Non renseigné'}</span>
+            </div>
+            ${orderMode === 'Livraison' ? `
+            <div class="summary-line order-mode-summary">
+                <span>🏠 Adresse :</span>
+                <span>${escapeHTML(deliveryAddress)}</span>
+            </div>` : ''}
+            <div class="summary-line order-mode-summary">
+                <span>🕒 Heure :</span>
+                <span>${formatRequestedTime(requestedTime) || 'Non renseignée'}</span>
+            </div>
             <div class="summary-line">
                 <span>Sous-total:</span>
                 <span>${subTotal.toFixed(2)}€</span>
@@ -1094,6 +1184,11 @@ LEMON CHERRY GÉLATO🍋🍒`,
         message += "RESUME:\n";
         message += `- ${totalItems} article${totalItems > 1 ? 's' : ''} commande\n`;
         message += `- Méthode de paiement: ${paymentMethod}\n`;
+        message += `- Mode de réception: ${orderMode}\n`;
+        if (orderMode === 'Livraison') {
+            message += `- Adresse de livraison: ${deliveryAddress.trim()}\n`;
+        }
+        message += `- Heure souhaitée: ${formatRequestedTime(requestedTime)}\n`;
         message += "====================\n";
         message += `DETAIL DES ARTICLES:\n`;
 
@@ -1110,7 +1205,11 @@ LEMON CHERRY GÉLATO🍋🍒`,
             message += `\nREDUCTION (${appliedPromo}): -${discount.toFixed(2)} EUR`;
         }
         message += `\nTOTAL FINAL: ${totalPrice.toFixed(2)} EUR`;
-        message += " \n-LIVRAISON: A convenir\n";
+        message += `\n\nMODE DE RECEPTION: ${orderMode.toUpperCase()}`;
+        if (orderMode === 'Livraison') {
+            message += `\nADRESSE: ${deliveryAddress.trim()}`;
+        }
+        message += `\nHEURE SOUHAITEE: ${formatRequestedTime(requestedTime)}`;
         message += " \n-CONTACT: Merci de confirmer cette commande\n";
         message += ` \n-Commande passee le: ${formattedDate}\n`;
         return message;
@@ -1146,6 +1245,22 @@ LEMON CHERRY GÉLATO🍋🍒`,
             showPage(pageId);
         });
     });
+
+    // Synchronise les champs adresse / heure avec les variables de commande.
+    function handleOrderPreferenceInput(e) {
+        if (e.target.id === 'delivery-address-input') {
+            deliveryAddress = e.target.value;
+            syncOrderPreferencesUI();
+        }
+
+        if (e.target.id === 'requested-time-input') {
+            requestedTime = e.target.value;
+            syncOrderPreferencesUI();
+        }
+    }
+
+    document.body.addEventListener('input', handleOrderPreferenceInput);
+    document.body.addEventListener('change', handleOrderPreferenceInput);
 
     document.body.addEventListener('click', function (e) {
         const target = e.target;
@@ -1262,6 +1377,17 @@ LEMON CHERRY GÉLATO🍋🍒`,
             renderConfirmation();
         }
 
+        if (target.closest('.fulfillment-btn')) {
+            const btn = target.closest('.fulfillment-btn');
+            orderMode = btn.dataset.fulfillment;
+            syncOrderPreferencesUI();
+
+            if (tg.HapticFeedback && typeof tg.HapticFeedback.selectionChanged === 'function') {
+                tg.HapticFeedback.selectionChanged();
+            }
+            return;
+        }
+
         if (target.closest('.payment-btn')) {
             paymentMethod = target.closest('.payment-btn').dataset.method;
             document.querySelectorAll('.payment-btn').forEach(btn => {
@@ -1297,6 +1423,16 @@ LEMON CHERRY GÉLATO🍋🍒`,
         }
 
         if (target.closest('#checkout-button')) {
+            const preferenceError = getOrderPreferencesError();
+            if (preferenceError) {
+                if (tg.HapticFeedback) {
+                    tg.HapticFeedback.notificationOccurred('error');
+                }
+                showNotification(`⚠️ ${preferenceError}`);
+                syncOrderPreferencesUI();
+                return;
+            }
+
             renderConfirmation();
         }
 
@@ -1305,14 +1441,33 @@ LEMON CHERRY GÉLATO🍋🍒`,
         }
 
        if (target.closest('#confirm-order-button')) {
-            // Remplace l'ancien identifiant par le bon compte de réception
-            const targetUsername = 'DREAMSHOP3300'; 
-            
+            const preferenceError = getOrderPreferencesError();
+            if (preferenceError) {
+                if (tg.HapticFeedback) {
+                    tg.HapticFeedback.notificationOccurred('error');
+                }
+                showNotification(`⚠️ ${preferenceError}`);
+                showPage('page-cart');
+                syncOrderPreferencesUI();
+                return;
+            }
+
+            // Compte Telegram qui reçoit la commande.
+            const targetUsername = 'DREAMSHOP3300';
+
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
             const encodedMessage = encodeURIComponent(message);
+
+            // openTelegramLink ouvre le chat directement DANS Telegram,
+            // contrairement à openLink qui ouvre un navigateur externe.
             const telegramUrl = `https://t.me/${targetUsername}?text=${encodedMessage}`;
-            tg.openLink(telegramUrl);
+            if (typeof tg.openTelegramLink === 'function') {
+                tg.openTelegramLink(telegramUrl);
+            } else {
+                // Fallback pour de très anciennes versions de Telegram.
+                window.location.href = `tg://resolve?domain=${targetUsername}&text=${encodedMessage}`;
+            }
         }
     });
 

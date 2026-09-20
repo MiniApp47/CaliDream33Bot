@@ -1133,6 +1133,113 @@
             flex-shrink: 0;
         }
 
+        /* --- Choix MeetUp / Livraison dans le panier --- */
+        .order-preferences {
+            background: rgba(44, 44, 46, 0.9);
+            border: 1px solid #5b37d4;
+            border-radius: 16px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .order-preferences h4 {
+            margin: 0 0 12px 0;
+            text-align: center;
+            font-family: Optima, sans-serif;
+        }
+
+        .fulfillment-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .fulfillment-btn {
+            min-height: 58px;
+            border-radius: 12px;
+            border: 2px solid #4a4a4c;
+            background: #2c2c2e;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .fulfillment-btn:active {
+            transform: scale(0.98);
+        }
+
+        .fulfillment-btn.active {
+            border-color: #cf81a0;
+            background: linear-gradient(135deg, #5b37d4, #be6bb0);
+            box-shadow: 0 0 10px rgba(207, 129, 160, 0.7);
+        }
+
+        .order-field {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .order-field label {
+            font-size: 0.9rem;
+            color: #e7d9ff;
+            font-weight: 700;
+        }
+
+        .order-field input,
+        .order-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 12px;
+            border: 1px solid #cf81a0;
+            background: #1c1c1d;
+            color: #ffffff;
+            padding: 13px;
+            font-size: 1rem;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .order-field textarea {
+            min-height: 78px;
+            resize: vertical;
+        }
+
+        .order-field input:focus,
+        .order-field textarea:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 0 2px rgba(207, 129, 160, 0.22);
+        }
+
+        #order-preferences-helper {
+            margin: 10px 0 0 0;
+            min-height: 20px;
+            text-align: center;
+            color: #ffb3b3;
+            font-size: 0.86rem;
+        }
+
+        #order-preferences-helper.valid {
+            color: #80e5a1;
+        }
+
+        #confirmation-summary .order-mode-summary {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 5px 0;
+            text-align: left;
+        }
+
+        #confirmation-summary .order-mode-summary span:last-child {
+            text-align: right;
+            overflow-wrap: anywhere;
+        }
+
         .payment-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1704,6 +1811,27 @@
                 <span>Total:</span>
                 <span id="cart-total-price">0.00€</span>
             </div>
+
+            <div class="order-preferences">
+                <h4>Comment veux-tu récupérer ta commande ?</h4>
+                <div class="fulfillment-options">
+                    <button type="button" class="fulfillment-btn" data-fulfillment="MeetUp">🤝 MeetUp</button>
+                    <button type="button" class="fulfillment-btn" data-fulfillment="Livraison">🚚 Livraison</button>
+                </div>
+
+                <div id="delivery-address-container" class="order-field">
+                    <label for="delivery-address-input">🏠 Adresse de livraison</label>
+                    <textarea id="delivery-address-input" autocomplete="street-address" placeholder="Ex : 12 rue ..., 75000 Paris"></textarea>
+                </div>
+
+                <div id="requested-time-container" class="order-field">
+                    <label for="requested-time-input">🕒 Heure souhaitée</label>
+                    <input type="time" id="requested-time-input">
+                </div>
+
+                <p id="order-preferences-helper">Choisis MeetUp ou Livraison.</p>
+            </div>
+
             <button id="checkout-button" class="main-action-btn">Commander</button>
             <button id="cart-continue-shopping" class="secondary-action-btn">Continuer les achats</button>
         </div>
