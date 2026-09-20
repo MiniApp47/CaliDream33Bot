@@ -162,6 +162,23 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
+                        {
+                            id: 'FRESH FROZEN 🧊✨',
+                            name: 'FRESH FROZEN 🧊✨',
+                            farm: 'FULL MELT 🫠✨',
+                            promoEligible: false,
+                            type: 'FRESH FROZEN',
+                            image: 'ProductFF.jpg',
+                            video: 'VideoFF.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 60.00 },
+                                { weight: '10g', price: 110.00 },
+                                { weight: '25g', price: 200.00 },
+                                { weight: '50g', price: 350.00 },
+                                { weight: '100g', price: 650.00 }
+                            ]
+                        },
                       /*   {
                             id: 'SUPER BOOF X CHERRY 🍒🍋',
                             name: 'SUPER BOOF X CHERRY 🍒🍋',
@@ -202,6 +219,23 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
+                        {
+                            id: 'SUPER LEMON HAZE 🍋‍🟩',
+                            name: 'PLASMASTATIC 🍋',
+                            farm: 'FULL MELT 🫠✨',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductPS.jpg',
+                            video: 'VideoPS.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 80.00 },
+                                { weight: '10g', price: 150.00 },
+                                { weight: '25g', price: 260.00 },
+                                { weight: '50g', price: 480.00 },
+                                { weight: '100g', price: 900.00 }
+                            ]
+                        }
                        /*  {
                             id: 'SUPER LEMON HAZE 🍋‍🟩',
                             name: 'SUPER LEMON HAZE 🍋‍🟩',
@@ -283,14 +317,14 @@ LEMON CHERRY GÉLATO🍋🍒`,
             image: 'CategWeed.png',
             farms: [
                 {
-                    id: 'CALI_USA',
+                    id: 'CALI_CANADIENNE',
                     name: '🇨🇦 RÉAL CALI CANADIENNE 📦',
                     image: '',
                     badgeText: '1 produit',
                     products: [
                         {
-                            id: 'GELATO 🍦',
-                            name: 'GELATO 🍦',
+                            id: 'Cali cannadienne 🇨🇦',
+                            name: 'Cali cannadienne 🇨🇦',
                             farm: '📍CANADIENNE PREMIUM ✨ ',
                             promoEligible: false,
                             type: 'Weed',
