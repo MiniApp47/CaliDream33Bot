@@ -172,11 +172,11 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             video: 'VideoFF.mp4',
                             description: '',
                             tarifs: [
-                                { weight: '5g', price: 60.00 },
-                                { weight: '10g', price: 110.00 },
-                                { weight: '25g', price: 200.00 },
-                                { weight: '50g', price: 350.00 },
-                                { weight: '100g', price: 650.00 }
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 120.00 },
+                                { weight: '25g', price: 220.00 },
+                                { weight: '50g', price: 380.00 },
+                                { weight: '100g', price: 700.00 }
                             ]
                         },
                       /*   {
@@ -231,7 +231,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             tarifs: [
                                 { weight: '5g', price: 80.00 },
                                 { weight: '10g', price: 150.00 },
-                                { weight: '25g', price: 260.00 },
+                                { weight: '25g', price: 280.00 },
                                 { weight: '50g', price: 480.00 },
                                 { weight: '100g', price: 900.00 }
                             ]
