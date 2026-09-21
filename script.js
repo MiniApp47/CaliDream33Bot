@@ -94,6 +94,44 @@ document.addEventListener('DOMContentLoaded', function () {
             image: 'CategHash.png',
             farms: [
                 {
+                    id: 'wpff',
+                    name: 'WPFF 🍯🥶',
+                    image: '',
+                    badgeText: '2 produits',
+                    products: [
+                         {
+                            id: 'RED DRAGON🐉🔴',
+                            name: 'RED DRAGON 🐉🔴',
+                            farm: 'CaliDreamSelection ✅️',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductRD.png',
+                            video: 'VideoRD.mp4',
+                            description: `75/90u 🔥`,
+                            tarifs: [
+                                { weight: '2g', price: 90.00 },
+                                { weight: '5g', price: 190.00 },
+                                { weight: '10g', price: 380.00 },
+                            ]
+                        },
+                         {
+                            id: 'COOKIES&CRÈME🍪🍦',
+                            name: 'COOKIES&CRÈME 🍪🍦',
+                            farm: 'CaliDreamSelection ✅️',
+                            promoEligible: false,
+                            type: 'Hash',
+                            image: 'ProductCC.png',
+                            video: 'VideoCC.mp4',
+                            description: `75/90u 🔥`,
+                            tarifs: [
+                                { weight: '2g', price: 90.00 },
+                                { weight: '5g', price: 190.00 },
+                                { weight: '10g', price: 380.00 },
+                            ]
+                        },
+                    ]
+                },
+                {
                     id: 'dry premium',
                     name: '🖐🏼 DRY PREMIUM 👩‍🌾',
                     image: '',
@@ -119,6 +157,8 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 350.00 }
                             ]
                         },
+                            ]
+                },
                        /*  {
                             id: 'BLACK CHERRY 🖤🍒',
                             name: 'BLACK CHERRY 🖤🍒',
@@ -154,8 +194,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
 
                             ]
                         } */
-                    ]
-                },
+                
                 {
                     id: 'FRESH FROZEN',
                     name: '💦 RÉAL FRESH FROZEN 🥵',
@@ -163,9 +202,9 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     badgeText: '1 produit',
                     products: [
                         {
-                            id: 'FRESH FROZEN 🧊✨',
-                            name: 'FRESH FROZEN 🧊✨',
-                            farm: 'FULL MELT 🫠✨',
+                            id: 'PEACH TSUNAMI 🍑🌊',
+                            name: 'PEACH TSUNAMI 🍑🌊',
+                            farm: 'FULL MELT 🧊✨',
                             promoEligible: false,
                             type: 'FRESH FROZEN',
                             image: 'ProductFF.jpg',
@@ -220,14 +259,14 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     badgeText: '1 produit',
                     products: [
                         {
-                            id: 'SUPER LEMON HAZE 🍋‍🟩',
-                            name: 'PLASMASTATIC 🍋',
-                            farm: 'FULL MELT 🫠✨',
+                            id: 'PLASMASTATIC 🍋',
+                            name: 'PLASMASTATIC 💥',
+                            farm: 'FULL MELT 🧊✨',
                             promoEligible: false,
                             type: 'PLASMASTATIC',
                             image: 'ProductPS.jpg',
                             video: 'VideoPS.mp4',
-                            description: '',
+                            description: 'STRAIN DISPONIBLE : \n\n • SUPERBOOF x 26MM 🍊💎\n • FORBIDDEN SKITTLEZ 🌈💎\n • YELLOW MELON 🍋',
                             tarifs: [
                                 { weight: '5g', price: 80.00 },
                                 { weight: '10g', price: 150.00 },
