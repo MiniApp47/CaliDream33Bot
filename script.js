@@ -445,7 +445,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             promoEligible: false,
                             type: 'Extra',
                             image: 'ProductPave.png',
-                            video: 'VideoPave.mov',
+                            video: '',
                             description: 'PAVÉ PROVENANCE PÉROU 🇵🇪\n\nPureté 0,96. Qualité extrême pour utilisateurs avertis.',
                             tarifs: [
                                 { weight: '1g', price: 60.00 },
