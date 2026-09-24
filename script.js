@@ -356,6 +356,48 @@ LEMON CHERRY GÉLATO🍋🍒`,
             image: 'CategWeed.png',
             farms: [
                 {
+                    id: 'CALI SPAIN🇪🇸',
+                    name: 'CALI SPAIN🇪🇸',
+                    image: '',
+                    badgeText: '1 produit',
+                    products: [
+                        {
+                            id: 'CALI SPAIN 🇪🇸',
+                            name: 'CALI SPAIN 🇪🇸',
+                            farm: '📍 SPAIN PREMIUM ✨ ',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductS.jpg',
+                            video: '',
+                            description: ``,
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 90.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 250.00 },
+                                { weight: '100g', price: 450.00 },
+                            ]
+                        },
+                        {
+                            id: 'PURPLE 👾',
+                            name: 'PURPLE 👾',
+                            farm: '📍 SPAIN PREMIUM ✨ ',
+                            promoEligible: false,
+                            type: 'Weed',
+                            image: 'ProductP.jpg',
+                            video: '',
+                            description: ``,
+                            tarifs: [
+                                { weight: '5g', price: 50.00 },
+                                { weight: '10g', price: 90.00 },
+                                { weight: '25g', price: 150.00 },
+                                { weight: '50g', price: 250.00 },
+                                { weight: '100g', price: 450.00 },
+                            ]
+                        }
+                          ]
+                },
+                {
                     id: 'CALI_CANADIENNE',
                     name: 'Cali cannadienne🇨🇦🇺🇸',
                     image: '',
@@ -385,6 +427,8 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 650.00 },
                             ]
                         }
+                          ]
+                }
                       /*   {
                             id: 'GARY PAYTON 🇺🇸🔥',
                             name: 'GARY PAYTON 🇺🇸🔥',
@@ -419,8 +463,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 600.00 },
                             ]
                         } */
-                    ]
-                }
+                  
             ]
         },
  // --- Catégorie 3: ZIP (Extra) ---
@@ -438,7 +481,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'PAVÉ',
                             name: 'PAVÉ 🇵🇪',
                             farm: 'PROVENANCE PÉROU 🇵🇪',
@@ -453,7 +496,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '5g', price: 220.00 },
                                 { weight: '10g', price: 400.00 }
                             ]
-                        }
+                        } */
                     ]
                 }
             ]
