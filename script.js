@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactLinks = [
         {
             name: 'TELEGRAM 🌐',
-            url: 'https://t.me/+fGeRDkd7cVcyYzk8',
+            url: 'https://t.me/+v5rcJkJ0jxA2ZDg0',
             icon: '#icon-telegram',
             id: 'telegram-main',
             className: 'telegram-main',
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             name: 'STAFF TELEGRAM 🗣',
-            url: 'https://t.me/DREAMSHOP3300',
+            url: 'https://t.me/DREAMSAV33',
             icon: '#icon-telegram',
             id: 'telegram-main',
             className: 'telegram-main',
@@ -1535,7 +1535,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
             }
 
             // Compte Telegram qui reçoit la commande.
-            const targetUsername = 'DREAMSHOP3300';
+            const targetUsername = 'DREAMSAV33';
 
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
