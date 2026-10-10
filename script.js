@@ -361,7 +361,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'CALI SPAIN 🇪🇸',
                             name: 'CALI SPAIN 🇪🇸',
                             farm: '📍 SPAIN PREMIUM ✨ ',
@@ -377,7 +377,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 250.00 },
                                 { weight: '100g', price: 450.00 },
                             ]
-                        },
+                        }, */
                         {
                             id: 'PURPLE 👾',
                             name: 'PURPLE 👾',
