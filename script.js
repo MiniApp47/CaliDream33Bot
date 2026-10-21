@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             name: 'STAFF TELEGRAM 🗣',
-            url: 'https://t.me/DREAMSAV33',
+            url: 'https://t.me/DREAMSAVV33',
             icon: '#icon-telegram',
             id: 'telegram-main',
             className: 'telegram-main',
@@ -1535,7 +1535,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
             }
 
             // Compte Telegram qui reçoit la commande.
-            const targetUsername = 'DREAMSAV33';
+            const targetUsername = 'DREAMSAVV33';
 
             let message = formatOrderMessage();
             message = message.replace(/\*/g, '');
