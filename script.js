@@ -269,15 +269,15 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     ]
                 },
                 {
-                    id: 'PLASMASTATIC',
-                    name: '⚡️ PLASMASTATIC 🥵',
+                    id: '💎 DOUBLE STATIC SIFT🫧',
+                    name: '💎 DOUBLE STATIC SIFT 🫧',
                     image: '',
                     badgeText: '1 produit',
                     products: [
                         {
                             id: 'BLACK CHERRY PUNCH🍒🥊',
                             name: 'BLACK CHERRY PUNCH🍒🥊',
-                            farm: 'DOUBLE STATIC SIFT💎🫧',
+                            farm: 'HASH DREAM MOUTAINS🧑‍🌾',
                             promoEligible: false,
                             type: 'PLASMASTATIC',
                             image: 'ProductBCP.png',
@@ -291,6 +291,14 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 950.00 }
                             ]
                         },
+                    ]
+                },
+                {
+                    id: 'PLASMASTATIC',
+                    name: '⚡️ PLASMASTATIC 🥵',
+                    image: '',
+                    badgeText: '1 produit',
+                    products: [
                         {
                             id: 'GELATO RUNTZ🍋‍🟩',
                             name: 'GELATO RUNTZ🍋‍🟩',
