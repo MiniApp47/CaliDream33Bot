@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             promoEligible: false,
                             type: 'Hash',
                             image: 'ProductRD.png',
-                            video: 'VideoRD.mp4',
+                            video: 'VideoWP.mp4',
                             description: `75/90u 🔥`,
                             tarifs: [
                                 { weight: '2g', price: 90.00 },
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             promoEligible: false,
                             type: 'Hash',
                             image: 'ProductCC.png',
-                            video: 'VideoCC.mp4',
+                            video: 'VideoWP.mp4',
                             description: `75/90u 🔥`,
                             tarifs: [
                                 { weight: '2g', price: 90.00 },
@@ -201,7 +201,23 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                         {
+                            id: 'BERRY MELON 🍇🍈',
+                            name: 'BERRY MELON 🍇🍈',
+                            farm: '⛽ GAZ SÉLECTION',
+                            promoEligible: false,
+                            type: 'FRESH FROZEN',
+                            image: 'ProductBM.jpg',
+                            video: '',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 130.00 },
+                                { weight: '25g', price: 250.00 },
+                                { weight: '50g', price: 450.00 }
+                            ]
+                        },
+                        /* {
                             id: 'PEACH TSUNAMI 🍑🌊',
                             name: 'PEACH TSUNAMI 🍑🌊',
                             farm: 'FULL MELT 🧊✨',
@@ -217,7 +233,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 380.00 },
                                 { weight: '100g', price: 700.00 }
                             ]
-                        },
+                        }, */
                       /*   {
                             id: 'SUPER BOOF X CHERRY 🍒🍋',
                             name: 'SUPER BOOF X CHERRY 🍒🍋',
@@ -259,6 +275,57 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     badgeText: '1 produit',
                     products: [
                         {
+                            id: 'GELATO RUNTZ🍋‍🟩',
+                            name: 'GELATO RUNTZ🍋‍🟩',
+                            farm: 'STATIC NO FARMZ 🍃',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductGR.jpg',
+                            video: 'VideoGR.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 80.00 },
+                                { weight: '10g', price: 150.00 },
+                                { weight: '25g', price: 280.00 },
+                                { weight: '50g', price: 480.00 },
+                                { weight: '100g', price: 900.00 }
+                            ]
+                        },
+                        {
+                            id: 'pinacolada 🍹',
+                            name: 'Pinacolada 🍹',
+                            farm: 'STATIC NO FARMZ 🍃',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductPP.jpg',
+                            video: 'VideoP.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 80.00 },
+                                { weight: '10g', price: 150.00 },
+                                { weight: '25g', price: 280.00 },
+                                { weight: '50g', price: 480.00 },
+                                { weight: '100g', price: 900.00 }
+                            ]
+                        },
+                        {
+                            id: 'BANANA PUNCH🍌🥊',
+                            name: 'BANANA PUNCH🍌🥊',
+                            farm: 'STATIC NO FARMZ 🍃',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductBP.png',
+                            video: 'VideoBP.mp4',
+                            description: '',
+                            tarifs: [
+                                { weight: '5g', price: 80.00 },
+                                { weight: '10g', price: 150.00 },
+                                { weight: '25g', price: 280.00 },
+                                { weight: '50g', price: 480.00 },
+                                { weight: '100g', price: 900.00 }
+                            ]
+                        },
+                        {
                             id: 'PLASMASTATIC 🍋',
                             name: 'PLASMASTATIC 💥',
                             farm: 'FULL MELT 🧊✨',
@@ -274,7 +341,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 480.00 },
                                 { weight: '100g', price: 900.00 }
                             ]
-                        }
+                        },
                        /*  {
                             id: 'SUPER LEMON HAZE 🍋‍🟩',
                             name: 'SUPER LEMON HAZE 🍋‍🟩',
