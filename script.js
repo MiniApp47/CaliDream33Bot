@@ -208,7 +208,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             promoEligible: false,
                             type: 'FRESH FROZEN',
                             image: 'ProductBM.jpg',
-                            video: '',
+                            video: 'VideoBM.mp4',
                             description: '',
                             tarifs: [
                                 { weight: '5g', price: 70.00 },
