@@ -275,6 +275,23 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     badgeText: '1 produit',
                     products: [
                         {
+                            id: 'BLACK CHERRY PUNCH🍒🥊',
+                            name: 'BLACK CHERRY PUNCH🍒🥊',
+                            farm: 'DOUBLE STATIC SIFT💎🫧',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductBCP.png',
+                            video: 'VideoBCP.mp4',
+                            description: 'MICRON:73u-139u\n\nExtraction haute tension. Profil fruité et gassy.',
+                            tarifs: [
+                                { weight: '5g', price: 80.00 },
+                                { weight: '10g', price: 150.00 },
+                                { weight: '25g', price: 270.00 },
+                                { weight: '50g', price: 500.00 },
+                                { weight: '100g', price: 950.00 }
+                            ]
+                        },
+                        {
                             id: 'GELATO RUNTZ🍋‍🟩',
                             name: 'GELATO RUNTZ🍋‍🟩',
                             farm: 'STATIC NO FARMZ 🍃',
@@ -314,8 +331,9 @@ LEMON CHERRY GÉLATO🍋🍒`,
                             farm: 'STATIC NO FARMZ 🍃',
                             promoEligible: false,
                             type: 'PLASMASTATIC',
-                            image: 'ProductBP.png',
-                            video: 'VideoBP.mp4',
+                            image: 'ProductBP.jpg',
+                            images: ['ProductBP1.jpg'],
+                            video: '',
                             description: '',
                             tarifs: [
                                 { weight: '5g', price: 80.00 },
@@ -325,7 +343,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 900.00 }
                             ]
                         },
-                        {
+                       /*  {
                             id: 'PLASMASTATIC 🍋',
                             name: 'PLASMASTATIC 💥',
                             farm: 'FULL MELT 🧊✨',
@@ -341,7 +359,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 480.00 },
                                 { weight: '100g', price: 900.00 }
                             ]
-                        },
+                        }, */
                        /*  {
                             id: 'SUPER LEMON HAZE 🍋‍🟩',
                             name: 'SUPER LEMON HAZE 🍋‍🟩',
@@ -445,7 +463,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '100g', price: 450.00 },
                             ]
                         }, */
-                        {
+                       /*  {
                             id: 'PURPLE 👾',
                             name: 'PURPLE 👾',
                             farm: '📍 SPAIN PREMIUM ✨ ',
@@ -461,7 +479,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 250.00 },
                                 { weight: '100g', price: 450.00 },
                             ]
-                        }
+                        } */
                           ]
                 },
                 {
