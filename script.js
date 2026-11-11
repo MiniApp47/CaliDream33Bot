@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     image: '',
                     badgeText: '2 produits',
                     products: [
-                         {
+                        /*  {
                             id: 'FILTRED 120/220u ⚡',
                             name: 'FILTRED 120/220u ⚡',
                             farm: 'CaliDreamSelection ✅️',
@@ -156,7 +156,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 220.00 },
                                 { weight: '100g', price: 350.00 }
                             ]
-                        },
+                        }, */
                             ]
                 },
                        /*  {
@@ -201,7 +201,41 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                         {
+                        {
+                            id: 'CHERRY ZONP🍒',
+                            name: 'CHERRY ZONP🍒',
+                            farm: 'BY DREAM SELECTION🔬🧪',
+                            promoEligible: false,
+                            type: 'FRESH FROZEN',
+                            image: 'ProductCZ.jpg',
+                            video: 'VideoCZ.mp4',
+                            description: 'FROZEN🧊🫧 \n PLATE 50G Une odeur fruitée qui rappelle directement la cerise et les fruits rouges. En bouche, on retrouve un côté fruité avec une sensation assez sèche qui reste après dégustation.',
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 120.00 },
+                                { weight: '25g', price: 220.00 },
+                                { weight: '50g', price: 380.00 },
+                                { weight: '100g', price: 700.00 }
+                            ]
+                        },
+                        {
+                            id: 'BLUE COOKIES🔵🍪',
+                            name: 'BLUE COOKIES🔵🍪',
+                            farm: 'BY DREAM SELECTION🔬🧪',
+                            promoEligible: false,
+                            type: 'FRESH FROZEN',
+                            image: 'ProductBC.jpg',
+                            video: 'VideoBC.mp4',
+                            description: 'FROZEN🧊🫧 \n PLATE 50G',
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 120.00 },
+                                { weight: '25g', price: 220.00 },
+                                { weight: '50g', price: 380.00 },
+                                { weight: '100g', price: 700.00 }
+                            ]
+                        },
+                         /* {
                             id: 'BERRY MELON 🍇🍈',
                             name: 'BERRY MELON 🍇🍈',
                             farm: '⛽ GAZ SÉLECTION',
@@ -216,7 +250,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '25g', price: 250.00 },
                                 { weight: '50g', price: 450.00 }
                             ]
-                        },
+                        }, */
                         /* {
                             id: 'PEACH TSUNAMI 🍑🌊',
                             name: 'PEACH TSUNAMI 🍑🌊',
@@ -274,6 +308,23 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
+                        {
+                            id: 'MANDARINA🍊',
+                            name: 'MANDARINA🍊',
+                            farm: 'BY CALI DREAM SELECTION🔬🧪',
+                            promoEligible: false,
+                            type: 'PLASMASTATIC',
+                            image: 'ProductMD.jpg',
+                            video: 'VideoMD.mp4',
+                            description: 'EGGS STATIC SIFT ⚡️🫒\n\n Une odeur fruitée aux notes d\'agrumes, avec une dominante note d\'orange et de mandarine. Une senteur douce et fruitée qui rappelle les agrumes fraîchement pressés',
+                            tarifs: [
+                                { weight: '5g', price: 70.00 },
+                                { weight: '10g', price: 120.00 },
+                                { weight: '30g', price: 300.00 },
+                                { weight: '50g', price: 400.00 },
+                                { weight: '100g', price: 750.00 }
+                            ]
+                        },
                         {
                             id: 'BLACK CHERRY PUNCH🍒🥊',
                             name: 'BLACK CHERRY PUNCH🍒🥊',
@@ -496,7 +547,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                     image: '',
                     badgeText: '1 produit',
                     products: [
-                        {
+                       /*  {
                             id: 'Cali cannadienne 🇨🇦',
                             name: 'Cali cannadienne 🇨🇦',
                             farm: '📍CANADIENNE PREMIUM ✨ ',
@@ -519,7 +570,7 @@ LEMON CHERRY GÉLATO🍋🍒`,
                                 { weight: '50g', price: 350.00 },
                                 { weight: '100g', price: 650.00 },
                             ]
-                        }
+                        } */
                           ]
                 }
                       /*   {
